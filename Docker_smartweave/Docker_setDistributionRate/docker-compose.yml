@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  smartweave:
+    container_name: smartweave_setDistribution
+    image: ghcr.io/ator-development/smart-contracts:0.1.23
+    env_file:
+      - .env
+    command: npx ts-node scripts/distribution/set-token-distribution-rate.ts   

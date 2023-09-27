@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  facilitator:
+    container_name: Facilitator
+    image: ghcr.io/ator-development/facilitator:0.4.16
+    env_file:
+      - .env
+    command: npx hardhat run --network goerli scripts/deploy.ts   

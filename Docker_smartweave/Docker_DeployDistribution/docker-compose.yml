@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  smartweave:
+    container_name: smartweave_distribution
+    image: ghcr.io/ator-development/smart-contracts:0.1.23
+    env_file:
+      - .env
+    volumes:
+      - ./distribution-init-state.json:/usr/src/app/smartweave/dist/contracts/distribution-init-state.json
+    command: npm run deploy   
